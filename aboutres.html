@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ST. John's School - About</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=DM+Serif+Display:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head {
+            display: flex;
+            height: 15vh;
+            width: 100%;
+            justify-content: space-between;
+            background-color: #043c88;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            margin: 50px 30px;
+        }
+
+        .nav {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: white;
+            transition: all .8s ease;
+        }
+
+        .nav:hover {
+            border-bottom: 8px solid rgb(16, 162, 247);
+            background-color: rgba(255, 255, 255, 0.303);
+            padding: 10px 15px;
+        }
+
+        .name {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 41px;
+            margin: 3px 20px;
+        }
+
+        .tagline {
+            color: white;
+            font-family: "Source Sans 3", sans-serif;
+            margin: 2px 20px;
+        }
+
+        #hero1 {
+            height: 85vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .abth1 {
+            width: 100%;
+            color: #004aad;
+            font-family: 'cinzel', sans-serif;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 60px;
+            transition: color, 0.5s ease-in-out;
+        }
+        .abth1:hover{
+            color:  #015ed8;
+            font-size: 65px;
+        }
+
+        .msgbox {
+            height: 400px;
+            width: 60vw;
+            background-color: #e7f0f7;
+            border-radius: 15px;
+            transition: all .5s ease-in-out;
+        }
+        .msgbox:hover{
+            background-color:  #cae7fd;
+            transform: scale(1.06);
+               box-shadow: 20px 20px 40px #b1bfca,
+            -20px -20px 40px gray;
+        }
+
+        .msgname {
+            padding-top: 20px;
+            margin-left: 200px;
+            color: #004aad;
+            font-family: "DM Serif Display", serif;
+        }
+
+        .msgsub {
+            color: #5170ff;
+            font-family: "Josefin Sans", sans-serif;
+            margin-left: 200px;
+            padding-top: 4px;
+        }
+
+        .msgimg {
+            background-color: #043c88;
+            font-size: 130px;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            text-align: center;
+            margin-left: 45px;
+            margin-top: 20px;
+            float: left;
+        }
+
+        .msg {
+            font-size: 18px;
+            margin-top: 40px;
+            margin-left: 20px;
+            text-align: center;
+        }
+
+        .msgregard {
+            margin-left: 220px;
+        }
+
+        #hero2 {
+            height: 90vh;
+            width: 100%;
+        }
+
+        .abtbox {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box {
+            height: 280px;
+            width: 400px;
+            background-color: #e7f0f7;
+            border-radius: 15px;
+            transition: all .5s ease-in-out;
+        }
+        .box:hover{
+              background-color:  #cae7fd;
+            transform: scale(1.05);
+            box-shadow: 20px 20px 40px #b1bfca,
+            -20px -20px 40px gray;
+        }
+
+        .vimi {
+            color: black;
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 8000;
+            margin-top: 40px;
+        }
+
+        .vimip {
+            font-family: 'playfair display', sans-serif;
+            padding: 20px;
+            font-size: large;
+            font-weight: 2000;
+        }
+        .whybox{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .whyabt {
+            margin-top: 40px;
+            height: 300px;
+            width: 1040px;
+            background-color: #e7f0f7;
+            border-radius: 15px;
+                     transition: all .5s ease-in-out;
+        }
+        .whyabt:hover{
+              background-color:  #cae7fd;
+            transform: scale(1.05);
+            box-shadow: 20px 20px 40px gray,
+            -20px -20px 40px #cae7fd ;
+        }
+
+        .whytitle {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 8000;
+            padding-top: 20px;
+            margin-left: 60px;
+        }
+        .why{
+            font-family: 'playfair display', sans-serif;
+            font-size: 20px;
+            line-height: 2.4;
+            font-family: 2200;margin-left: 60px;
+        }
+        footer{
+            height: 10vh;
+            background-color: #043c88;
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+
+        /* Tablet - 768px to 1024px */
+        @media (max-width: 1024px) {
+            .head {
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .name {
+                font-size: 35px;
+                margin: 10px 0;
+            }
+
+            .tagline {
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+            ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            li {
+                margin: 20px 15px;
+            }
+
+            .nav {
+                font-size: 22px;
+            }
+
+            #hero1 {
+                height: auto;
+                padding: 40px 20px;
+            }
+
+            .abth1 {
+                font-size: 45px;
+            }
+
+            .abth1:hover {
+                font-size: 48px;
+            }
+
+            .msgbox {
+                width: 85vw;
+                height: auto;
+                padding: 20px;
+            }
+
+            .msgimg {
+                width: 150px;
+                height: 150px;
+                font-size: 100px;
+                margin-left: 30px;
+            }
+
+            .msgname {
+                margin-left: 170px;
+                font-size: 24px;
+            }
+
+            .msgsub {
+                margin-left: 170px;
+                font-size: 18px;
+            }
+
+            .msg {
+                font-size: 16px;
+                margin-top: 30px;
+                padding: 0 10px;
+            }
+
+            .msgregard {
+                margin-left: 180px;
+                margin-top: 20px;
+                font-size: 20px;
+            }
+
+            #hero2 {
+                height: auto;
+                padding: 40px 20px;
+            }
+
+            .abtbox {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 85%;
+                margin: 20px 0;
+                height: auto;
+                min-height: 250px;
+            }
+
+            .whyabt {
+                width: 85%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .whytitle {
+                margin-left: 20px;
+                font-size: 28px;
+            }
+
+            .why {
+                margin-left: 20px;
+                font-size: 18px;
+            }
+
+            footer {
+                font-size: 20px;
+                height: auto;
+                padding: 20px 10px;
+            }
+        }
+
+        /* Mobile - Below 768px */
+        @media (max-width: 768px) {
+            .head {
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .name {
+                font-size: 28px;
+                margin: 8px 10px;
+                text-align: center;
+            }
+
+            .tagline {
+                font-size: 14px;
+                margin: 5px 10px;
+                text-align: center;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+
+            .nav {
+                font-size: 20px;
+            }
+
+            #hero1 {
+                padding: 30px 10px;
+            }
+
+            .abth1 {
+                font-size: 32px;
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+
+            .abth1:hover {
+                font-size: 34px;
+            }
+
+            .msgbox {
+                width: 95%;
+                height: auto;
+                padding: 15px;
+            }
+
+            .msgimg {
+                width: 100px;
+                height: 100px;
+                font-size: 70px;
+                margin-left: 15px;
+                float: none;
+                margin: 10px auto;
+            }
+
+            .msgname {
+                margin-left: 0;
+                text-align: center;
+                font-size: 22px;
+                padding-top: 15px;
+            }
+
+            .msgsub {
+                margin-left: 0;
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .msg {
+                font-size: 14px;
+                margin-top: 20px;
+                text-align: center;
+                line-height: 1.6;
+            }
+
+            .msgregard {
+                margin-left: 0;
+                text-align: center;
+                margin-top: 15px;
+                font-size: 18px;
+            }
+
+            #hero2 {
+                padding: 30px 10px;
+            }
+
+            .box {
+                width: 95%;
+            }
+
+            .vimi {
+                font-size: 24px;
+                margin-top: 25px;
+            }
+
+            .vimip {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .whyabt {
+                width: 95%;
+                padding: 15px;
+                margin-top: 30px;
+            }
+
+            .whytitle {
+                margin-left: 15px;
+                font-size: 24px;
+            }
+
+            .why {
+                margin-left: 15px;
+                font-size: 16px;
+                line-height: 2;
+            }
+
+            footer {
+                font-size: 16px;
+                padding: 15px 10px;
+            }
+        }
+
+        /* Small Mobile - Below 480px */
+        @media (max-width: 480px) {
+            .name {
+                font-size: 24px;
+            }
+
+            .tagline {
+                font-size: 12px;
+            }
+
+            .nav {
+                font-size: 18px;
+            }
+
+            .abth1 {
+                font-size: 26px;
+            }
+
+            .abth1:hover {
+                font-size: 28px;
+            }
+
+            .msgname {
+                font-size: 20px;
+            }
+
+            .msgsub {
+                font-size: 14px;
+            }
+
+            .msg {
+                font-size: 13px;
+            }
+
+            .msgregard {
+                font-size: 16px;
+            }
+
+            .vimi {
+                font-size: 20px;
+            }
+
+            .vimip {
+                font-size: 14px;
+            }
+
+            .whytitle {
+                font-size: 20px;
+            }
+
+            .why {
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <div class="wraphead">
+            <img src="" alt="Logo not found" class="logo">
+            <h1 class="name">ST. John's School</h1>
+            <h3 class="tagline">Walk to the Light</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="nav" href="homeres.html">Home</a></li>
+                <li><a class="nav" href="aboutres.html">About</a></li>
+                <li><a class="nav" href="admissionres.html">Admission</a></li>
+                <li><a class="nav" href="galleryres.html">Gallery</a></li>
+                <li><a class="nav" href="contactres.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero1">
+        <main class="msgmain">
+            <h1 class="abth1">About St. John's School</h1>
+            <div class="msgbox">
+                <h1 class="msgname">Mr. Rajesh Sahani</h1>
+                <h3 class="msgsub">Principal's Message</h3>
+                <div class="msgimg">👤</div>
+                <p class="msg">Dear Parents and Students,<br>
+                    Welcome to St. John's School, where we believe in nurturing not just academic excellence,<br> but
+                    also character, values, and life skills. <br>Our mission is to provide an environment where every
+                    child feels valued, <br>challenged, and inspired to reach their full potential.
+                    With a dedicated team of educators and a supportive community, we strive to prepare our students for
+                    the challenges of tomorrow while instilling in them the timeless values of integrity, compassion,
+                    and service.</p>
+                <h2 class="msgregard">Warm regards,<br>Mr. Rajesh Sahani</h2>
+            </div>
+        </main>
+    </section>
+    <section id="hero2">
+        <main class="abtdown">
+            <div class="abtbox">
+                <div class="box">
+                    <h1 class="vimi">🎯 Our Vision</h1>
+                    <p class="vimip">To be a center of excellence in education, fostering intellectual growth, moral
+                        values, and social responsibility in our students. We envision creating leaders who will
+                        contribute positively to society and make a difference in the world.</p>
+                </div>
+                <div class="box">
+                    <h1 class="vimi">💡 Our Mission</h1>
+                    <p class="vimip">To provide quality education that develops the whole child - intellectually,
+                        physically, emotionally, and spiritually. We are committed to creating a safe, supportive, and
+                        stimulating environment where students can discover their potential and develop a lifelong love
+                        for learning.</p>
+                </div>
+            </div>
+            <div class="whybox">
+                <div class="whyabt">
+                    <h1 class="whytitle">Why Choose St. John's?</h1>
+                    <p class="why">
+                        ✓ Classes from Nursery to 10th Grade with experienced faculty <br>
+                        ✓ Modern infrastructure with smart classrooms and laboratories <br>
+                        ✓ Focus on character building and moral values <br>
+                        ✓ Strong emphasis on sports and extracurricular activities <br>
+                        ✓ Safe and nurturing learning environment <br>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>© 2026 St. John's School. All Rights Reserved. <br>Nurturing Young Minds | Building Future Leaders</footer>
+</body>
+
+</html>

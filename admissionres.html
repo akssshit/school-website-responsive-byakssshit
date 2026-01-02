@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ST. John's School - Admission</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=DM+Serif+Display:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head {
+            display: flex;
+            height: 15vh;
+            width: 100%;
+            justify-content: space-between;
+            background-color: #043c88;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            margin: 50px 30px;
+        }
+
+        .nav {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: white;
+            transition: all .5s ease;
+        }
+
+        .nav:hover {
+            border-bottom: 8px solid rgb(16, 162, 247);
+            background-color: rgba(255, 255, 255, 0.303);
+            padding: 10px 15px;
+        }
+
+        .name {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-size: 41px;
+            margin: 3px 20px;
+        }
+
+        .tagline {
+            color: white;
+            font-family: "Source Sans 3", sans-serif;
+            margin: 2px 20px;
+        }
+
+        #hero1 {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .title1 {
+            width: 100%;
+            color: #004aad;
+            font-size: 60px;
+            text-align: center;
+            font-family: 'cinzel decorative', sans-serif;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: all .5s ease;
+        }
+        .title1:hover{
+            font-size: 65px;
+            color:#015ed8 ;
+        }
+
+        .banner {
+            width: 900px;
+            height: 60vh;
+            background-color: #5186cd;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: all .5s ease;
+        }
+        .banner:hover{
+              background-color: #3d89ec;
+            box-shadow: 20px 20px 40px gray ,
+            -20px -20px 40px #bfe3ff;
+            transform: scale(1.05);
+        }
+
+        .bannertitle {
+            color: white;
+            font-family: 'Playfair Display', sans-serif;
+            font-size: 42px;
+        }
+
+        .bannersub {
+            color: white;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        #hero2 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reqbox {
+            width: 1200px;
+            height: 80vh;
+            background-color: #e7f0f7;
+            border-radius: 20px;
+            transition: all .5s ease;
+        }
+        .reqbox:hover{
+             background-color: #bfe3ff;
+            box-shadow: 20px 20px 40px gray ,
+            -20px -20px 40px #bfe3ff;
+            transform: scale(1.05);
+        }
+
+        .reqtitle {
+            font-weight: bold;
+            font-family: 'Playfair Display', sans-serif;
+            padding-left: 50px;
+            padding-top: 20px;
+            font-size: 50px;
+        }
+
+        .reqcon {
+            padding-left: 50px;
+            line-height: 2.5;
+            font-size: 30px;
+        }
+
+        #hero3 {
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .feebox {
+            height: 70vh;
+            width: 1200px;
+            background-color: #e7f0f7;
+            border-radius: 15px;
+            transition: all .5s ease-in-out;
+        }
+        .feebox:hover{
+            background-color: #bfe3ff;
+            box-shadow: 20px 20px 40px gray ,
+            -20px -20px 40px #bfe3ff;
+            transform: scale(1.05);
+        }
+
+        .feetitle {
+            font-size: 40px;
+            font-family: 'Playfair Display', sans-serif;
+            padding: 20px 40px;
+        }
+        .fees{
+               padding-left: 50px;
+            line-height: 2.5;
+            font-size: 34px;
+        }
+        footer{
+         height: 10vh;
+            background-color: #043c88;
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+
+        /* Tablet - 768px to 1024px */
+        @media (max-width: 1024px) {
+            .head {
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .name {
+                font-size: 35px;
+                margin: 10px 0;
+            }
+
+            .tagline {
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+            ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            li {
+                margin: 20px 15px;
+            }
+
+            .nav {
+                font-size: 22px;
+            }
+
+            #hero1 {
+                height: auto;
+                padding: 40px 20px;
+            }
+
+            .title1 {
+                font-size: 45px;
+            }
+
+            .title1:hover {
+                font-size: 48px;
+            }
+
+            .banner {
+                width: 85%;
+                height: auto;
+                padding: 40px 20px;
+            }
+
+            .bannertitle {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            .bannersub {
+                font-size: 20px;
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            #hero2 {
+                height: auto;
+                padding: 40px 20px;
+            }
+
+            .reqbox {
+                width: 85%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .reqtitle {
+                font-size: 38px;
+                padding-left: 30px;
+            }
+
+            .reqcon {
+                font-size: 24px;
+                padding-left: 30px;
+                line-height: 2.2;
+            }
+
+            #hero3 {
+                height: auto;
+                padding: 40px 20px;
+            }
+
+            .feebox {
+                width: 85%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .feetitle {
+                font-size: 32px;
+                padding: 20px 30px;
+            }
+
+            .fees {
+                font-size: 26px;
+                padding-left: 30px;
+            }
+
+            footer {
+                font-size: 20px;
+                height: auto;
+                padding: 20px 10px;
+            }
+        }
+
+        /* Mobile - Below 768px */
+        @media (max-width: 768px) {
+            .head {
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .name {
+                font-size: 28px;
+                margin: 8px 10px;
+                text-align: center;
+            }
+
+            .tagline {
+                font-size: 14px;
+                margin: 5px 10px;
+                text-align: center;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+
+            .nav {
+                font-size: 20px;
+            }
+
+            #hero1 {
+                padding: 30px 15px;
+            }
+
+            .title1 {
+                font-size: 32px;
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+
+            .title1:hover {
+                font-size: 34px;
+            }
+
+            .banner {
+                width: 95%;
+                padding: 30px 15px;
+                margin-top: 25px;
+            }
+
+            .bannertitle {
+                font-size: 26px;
+            }
+
+            .bannersub {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+
+            #hero2 {
+                padding: 30px 15px;
+            }
+
+            .reqbox {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .reqtitle {
+                font-size: 28px;
+                padding-left: 20px;
+            }
+
+            .reqcon {
+                font-size: 18px;
+                padding-left: 20px;
+                padding-right: 15px;
+                line-height: 2;
+            }
+
+            #hero3 {
+                padding: 30px 15px;
+            }
+
+            .feebox {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .feetitle {
+                font-size: 26px;
+                padding: 15px 20px;
+            }
+
+            .fees {
+                font-size: 20px;
+                padding-left: 20px;
+                padding-right: 15px;
+                line-height: 2.2;
+            }
+
+            footer {
+                font-size: 16px;
+                padding: 15px 10px;
+            }
+        }
+
+        /* Small Mobile - Below 480px */
+        @media (max-width: 480px) {
+            .name {
+                font-size: 24px;
+            }
+
+            .tagline {
+                font-size: 12px;
+            }
+
+            .nav {
+                font-size: 18px;
+            }
+
+            .title1 {
+                font-size: 26px;
+            }
+
+            .title1:hover {
+                font-size: 28px;
+            }
+
+            .bannertitle {
+                font-size: 22px;
+            }
+
+            .bannersub {
+                font-size: 16px;
+            }
+
+            .reqtitle {
+                font-size: 24px;
+            }
+
+            .reqcon {
+                font-size: 16px;
+            }
+
+            .feetitle {
+                font-size: 22px;
+            }
+
+            .fees {
+                font-size: 18px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <div class="wraphead">
+            <img src="" alt="Logo not found" class="logo">
+            <h1 class="name">ST. John's School</h1>
+            <h3 class="tagline">Walk to the Light</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="nav" href="homeres.html">Home</a></li>
+                <li><a class="nav" href="aboutres.html">About</a></li>
+                <li><a class="nav" href="admissionres.html">Admission</a></li>
+                <li><a class="nav" href="galleryres.html">Gallery</a></li>
+                <li><a class="nav" href="contactres.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero1">
+        <main class="bannner1">
+            <div class="title1">Admission Information</div>
+            <div class="banner">
+                <h1 class="bannertitle">Admissions Open for 2026-27</h1>
+                <h2 class="bannersub">Apply now for classes Nursery to 10th Grade</h2>
+            </div>
+        </main>
+    </section>
+    <section id="hero2">
+        <main class="req">
+            <div class="reqbox">
+                <h1 class="reqtitle">📋Admission Requirements</h1>
+                <p class="reqcon">Birth certificate copy <br>
+                    Previous school transfer certificate (for classes 1-10) <br>
+                    Address proof <br>
+                    Parent ID proof <br>
+                    Recent passport size photographs (4 copies) <br>
+                    Medical fitness certificate</p>
+            </div>
+        </main>
+    </section>
+    <section id="hero3">
+        <main class="feesstructure">
+            <div class="feebox">
+                <h1 class="feetitle">Fee Structure for 2026 - 2027</h1>
+                <p class="fees">
+                    Nursery to UKG: ₹10xx per month <br>
+                    Class 1 to 5: ₹13xx per month <br>
+                    Class 6 to 8: ₹15xx per month <br>
+                    Class 9 to 10: ₹18xx per month 
+                </p>
+                <a href="" download="" class="btn" ></a>
+            </div>
+        </main>
+    </section>
+    <footer>© 2025 St. John's School. All Rights Reserved. <br>Nurturing Young Minds | Building Future Leaders</footer>
+</body>
+
+</html>
