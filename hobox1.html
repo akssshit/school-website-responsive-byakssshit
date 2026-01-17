@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Excellence in Sports🏆</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Playfair+Display:wght@500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .back {
+            text-decoration: none;
+            color: blue;
+            margin-left: 20px;
+            font-size: 22px;
+            font-family: sans-serif;
+        }
+
+        .pagetitle {
+            font-size: 42px;
+            font-family: 'cinzel', sans-serif;
+            width: 100%;
+            text-align: center;
+            color: #015ed8;
+            margin-top: 40px;
+        }
+
+        .pagesub {
+            font-family: 'source sans 3', sans-serif;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .para {
+            font-size: 20px;
+            color: black;
+            margin: 50px 90px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            border-left: 8px solid deepskyblue;
+            padding-left: 25px;
+            font-weight: bold;
+        }
+
+        .sportsbox {
+            height: 50vh;
+            width: 1000px;
+            background-color: #e7f0f7;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .centerbox {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            height: 100%;
+            width: 100%;
+        }
+
+        .girls {
+            background-color: #ffc5db;
+            border-top-left-radius: 20px;
+            color: palevioletred;
+            border-bottom-left-radius: 20px;
+        }
+
+        .boys {
+            background-color: #d4e6fe;
+            border-top-right-radius: 20px;
+            color: #015ed8;
+            border-bottom-right-radius: 20px;
+        }
+
+        .boxtitle {
+            margin: 20px 30px;
+            font-family: 'playfair display', sans-serif;
+        }
+
+        .sport {
+            margin: 20px 40px;
+            line-height: 1.5;
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+
+        .sport {
+            list-style: none;
+        }
+
+        .sport li::before {
+            content: "🏅";
+        }
+
+        .photos {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .phototitle {
+            color: #015ed8;
+            font-family: 'cinzel', sans-serif;
+            width: 100%;
+            text-align: center;
+            font-size: 42px;
+            margin-top: 50px;
+        }
+
+        .boyimgs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .imgb {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-left: 30px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .sportsbox {
+                width: 90%;
+            }
+
+            .para {
+                margin: 50px 50px;
+            }
+
+            .imgb {
+                width: 350px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pagetitle {
+                font-size: 32px;
+                margin-top: 30px;
+            }
+
+            .pagesub {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+
+            .para {
+                font-size: 18px;
+                margin: 30px 30px;
+                padding-left: 20px;
+            }
+
+            .sportsbox {
+                width: 90%;
+                height: auto;
+                flex-direction: column;
+            }
+
+            .girls {
+                border-radius: 20px 20px 0 0;
+            }
+
+            .boys {
+                border-radius: 0 0 20px 20px;
+            }
+
+            .sport {
+                font-size: 24px;
+                margin: 15px 30px;
+            }
+
+            .phototitle {
+                font-size: 32px;
+                margin-top: 30px;
+            }
+
+            .boyimgs {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .imgb {
+                width: 300px;
+                height: 225px;
+                margin-left: 0;
+            }
+
+            .photos {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back {
+                font-size: 18px;
+                margin-left: 10px;
+            }
+
+            .pagetitle {
+                font-size: 24px;
+                margin-top: 20px;
+            }
+
+            .pagesub {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+
+            .para {
+                font-size: 16px;
+                margin: 20px 15px;
+                padding-left: 15px;
+                border-left: 5px solid deepskyblue;
+            }
+
+            .sportsbox {
+                width: 95%;
+            }
+
+            .boxtitle {
+                margin: 15px 20px;
+                font-size: 24px;
+            }
+
+            .sport {
+                font-size: 20px;
+                margin: 15px 25px;
+            }
+
+            .phototitle {
+                font-size: 24px;
+                margin-top: 20px;
+                padding: 0 15px;
+            }
+
+            .boyimgs {
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .imgb {
+                width: 90%;
+                height: auto;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="back" href="homeres.html"><i class="fa-solid fa-circle-arrow-left"></i>
+        Back to Homepage</a>
+    <h1 class="pagetitle">Excellence in Sports 🏆</h1>
+    <h3 class="pagesub">State-of-the-art sports facilities and trained coaches to develop athletic skills.</h3>
+    <p class="para">At St. John's School, Chakia, sports are an important part of student life and overall development.
+        The school encourages physical fitness, teamwork, discipline, and a healthy competitive spirit through regular
+        athletic activities and annual sports programs. During the yearly sports events, students actively participate
+        in track competitions, races, and other athletic challenges, demonstrating enthusiasm and sportsmanship. These
+        activities not only help improve physical ability but also build confidence, resilience, and team cooperation
+        among students, reflecting the school's commitment to holistic education.</p>
+    <div class="centerbox">
+        <div class="sportsbox">
+            <div class="girls box">
+                <h1 class="girlstitle boxtitle">Sports For Girls</h1>
+                <ul class="girlssport sport">
+                    <li>XYZ</li>
+                    <li>ABC</li>
+                    <li>XYZ</li>
+                    <li>ABC</li>
+                    <li>XYZ</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            <div class="boys box">
+                <h1 class="boysport boxtitle">Sports For Boys</h1>
+                <ul class="boyssport sport">
+                    <li>XYZ</li>
+                    <li>ABC</li>
+                    <li>XYZ</li>
+                    <li>ABC</li>
+                    <li>XYZ</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="photos">
+        <h1 class="phototitle">Glimpes of our Annual Sports meet</h1>
+        <div class="boyimgs">
+            <img class="imgb" src="sport.jpg" alt="Glimpes of Annual Sport">
+            <img class="imgb" src="sportb.jpg" alt="Glimpes">
+            <img src="sportc.jpg" alt="Glimpes" class="imgb">
+            <img src="sportd.jpg" alt="Glimpes" class="imgb">
+            <img src="sporte.jpg" alt="Glimpes" class="imgb">
+            <img src="sportf.jpg" alt="Glimpes" class="imgb">
+        </div>
+    </section>
+</body>
+
+</html>
