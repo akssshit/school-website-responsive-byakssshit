@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Quality Education📚</title>
+    <style>
+                @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+                        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Playfair+Display:wght@500;600&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+ .back {
+            text-decoration: none;
+            color: blue;
+            margin-left: 20px;
+            font-size: 22px;
+            font-family: sans-serif;
+        }
+        .backbtn{
+            margin-top: 20px;
+        }
+        .title{
+            font-family: 'cinzel', sans-serif;
+            font-size: 44px;
+            color: #015ed8;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            animation: title 3s ease;
+        }
+        @keyframes title {
+            0%{
+                opacity: .5;
+                transform: translateX(-250px);
+            }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        }
+        .sub{
+             font-family: 'source sans 3', sans-serif;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            animation: sub 3s ease;
+        }
+        @keyframes sub {
+            0%{
+                opacity: .5;
+                transform: translateX(-250px);
+            }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        }
+        .quatitle{
+            font-family: 'playfair display', sans-serif;
+            margin: 50px 40px;
+            font-size: 35px;
+            animation: quatit 2s ease;
+        }
+        @keyframes quatit {
+            0%{
+                opacity: .5;
+                transform: translateX(-50px);
+            }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        }
+        .quacards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            justify-content: center;
+        }
+        .cards{
+            width: 300px;
+            min-height: auto;
+            background-color: #e7f0f7;
+            border-radius: 20px;
+            border: 1px solid #97d2ff;
+            box-shadow: 2px 2px 8px grey,
+            -2px -2px 8px #97d2ff;
+            transition: all .3s ease-in-out;
+        }
+        .cards:hover{
+            box-shadow: 4px 4px 10px grey,
+            -4px -4px 10px #97d2ff;
+            transform: scale(1.02);
+        }
+        .name{
+            font-family: 'source sans 3', sans-serif;
+            width: 100%;
+            text-align: center;
+            font-size: 26px;
+        }
+        .qualist{
+            list-style: none;
+            margin: 20px 40px;
+            font-size: 20px;
+            line-height: 2;
+        }
+        li::before{
+         content: '📜 ';
+        }
+        .msg{
+             font-size: 20px;
+            color: black;
+            margin: 50px 90px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            border-left: 8px solid deepskyblue;
+            padding-left: 25px;
+            font-weight: bold;
+            animation: msg 2s ease;
+        }
+        @keyframes msg {
+             0%{
+                opacity: .5;
+                transform: translateX(-50px);
+            }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .back {
+                font-size: 18px;
+                margin-left: 15px;
+            }
+            
+            .title {
+                font-size: 32px;
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+            
+            .sub {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+            
+            .quatitle {
+                font-size: 28px;
+                margin: 30px 20px;
+            }
+            
+            .msg {
+                font-size: 18px;
+                margin: 30px 20px;
+                padding-left: 15px;
+                border-left: 6px solid deepskyblue;
+            }
+            
+            .cards {
+                width: 90%;
+                max-width: 350px;
+            }
+            
+            .qualist {
+                margin: 20px 30px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back {
+                font-size: 16px;
+                margin-left: 10px;
+            }
+            
+            .backbtn {
+                margin-top: 15px;
+            }
+            
+            .title {
+                font-size: 26px;
+                margin-top: 15px;
+            }
+            
+            .sub {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+            
+            .quatitle {
+                font-size: 24px;
+                margin: 25px 15px;
+            }
+            
+            .msg {
+                font-size: 16px;
+                margin: 25px 15px;
+                padding-left: 12px;
+                border-left: 5px solid deepskyblue;
+            }
+            
+            .cards {
+                width: 95%;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+            
+            .qualist {
+                margin: 15px 20px;
+                font-size: 16px;
+                line-height: 1.8;
+            }
+            
+            footer {
+                font-size: 14px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="index.html"><i class="fa-solid fa-circle-arrow-left backbtn"></i>
+        Back to Homepage</a>
+        <h1 class="title">Quality Education 📚</h1>
+        <h3 class="sub">Comprehensive curriculum from Nursery to 10th grade with focus on <br>holistic development and academic excellence.</h3>
+        <p class="msg">At St. John's School in Bara Chakia, students are nurtured in a supportive English-medium learning environment that emphasises both academic learning and overall personality development. The school's experienced faculty focuses on strong fundamentals in core subjects while encouraging students to develop critical thinking, communication skills and confidence. With a structured curriculum, regular evaluations and extra-curricular opportunities, the school prepares every student not just for exams but for future challenges in higher studies and life. Reviews from parents and students highlight the qualified teachers, relevant curriculum and clean, disciplined classrooms, making education here both meaningful and future-ready.</p>
+        <h3 class="quatitle">Teacher's Qualifications <i class="fa-solid fa-graduation-cap"></i>
+</h3>
+        <div class="quacards">
+            <div class="cards">
+            <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+            <div class="cards">
+   <h1 class="name">ABC</h1>
+            <div class="qua">
+                <ul class="qualist">
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <footer style="text-align:center; padding:20px; font-family:sans-serif; color:#555;">
+© 2026 St. John's School, Chakia
+</footer>
+</body>
+</html>
