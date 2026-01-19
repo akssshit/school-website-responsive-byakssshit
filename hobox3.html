@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Experienced Faculty</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&family=Playfair+Display:wght@500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .back {
+            text-decoration: none;
+            color: blue;
+            margin-left: 20px;
+            font-size: 22px;
+            font-family: sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .back:hover {
+            color: #015ed8;
+        }
+
+        .backbtn {
+            margin-top: 20px;
+        }
+
+        .title {
+            font-family: 'cinzel', sans-serif;
+            font-size: 44px;
+            color: #015ed8;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            padding: 0 20px;
+            animation: title 3s ease;
+        }
+
+        @keyframes title {
+            0% {
+                opacity: .5;
+                transform: translateX(-250px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        .sub {
+            font-family: 'source sans 3', sans-serif;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            padding: 0 20px;
+            margin-top: 15px;
+            animation: sub 3s ease;
+        }
+
+        @keyframes sub {
+            0% {
+                opacity: .5;
+                transform: translateX(-250px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        .msg {
+            font-size: 20px;
+            color: black;
+            margin: 50px 90px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+            border-left: 8px solid deepskyblue;
+            padding-left: 25px;
+            font-weight: bold;
+            animation: msg 2s ease;
+        }
+
+        @keyframes msg {
+            0% {
+                opacity: .5;
+                transform: translateX(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        .boxes {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .box {
+            width: 250px;
+            height: 350px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 14px;
+            border: .5px solid rgb(231, 231, 231);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .box i {
+            font-size: 36px;
+            margin-top: 30px;
+        }
+
+        .card {
+            font-size: 28px;
+            font-family: 'playfair display', sans-serif;
+            font-weight: bold;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .p {
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #1a237e;
+            color: #fff;
+            padding: 20px;
+            font-family: Poppins, sans-serif;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Tablet Responsive */
+        @media screen and (max-width: 1024px) {
+            .title {
+                font-size: 38px;
+            }
+
+            .sub {
+                font-size: 22px;
+            }
+
+            .msg {
+                margin: 40px 50px;
+                font-size: 18px;
+            }
+
+            .boxes {
+                gap: 25px;
+            }
+
+            .box {
+                width: 220px;
+                height: 260px;
+            }
+
+            .card {
+                font-size: 24px;
+            }
+
+            .p {
+                font-size: 18px;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+            .back {
+                font-size: 18px;
+                margin-left: 15px;
+            }
+
+            .title {
+                font-size: 32px;
+                margin-top: 20px;
+            }
+
+            .sub {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .msg {
+                margin: 30px 20px;
+                font-size: 16px;
+                padding-left: 20px;
+                border-left: 6px solid deepskyblue;
+            }
+
+            .boxes {
+                justify-content: center;
+                gap: 20px;
+                padding: 0 15px;
+            }
+
+            .box {
+                width: 100%;
+                max-width: 320px;
+                height: auto;
+                min-height: 260px;
+            }
+
+            .card {
+                font-size: 22px;
+                padding: 10px 15px;
+            }
+
+            .p {
+                font-size: 17px;
+            }
+        }
+
+        /* Small Mobile */
+        @media screen and (max-width: 480px) {
+            .back {
+                font-size: 16px;
+                margin-left: 10px;
+            }
+
+            .backbtn {
+                margin-top: 15px;
+            }
+
+            .title {
+                font-size: 28px;
+                margin-top: 15px;
+            }
+
+            .sub {
+                font-size: 16px;
+            }
+
+            .msg {
+                margin: 25px 15px;
+                font-size: 15px;
+                padding-left: 15px;
+                border-left: 5px solid deepskyblue;
+            }
+
+            .box {
+                max-width: 280px;
+            }
+
+            .box i {
+                font-size: 32px;
+                margin-top: 20px;
+            }
+
+            .card {
+                font-size: 20px;
+                padding: 8px 10px;
+            }
+
+            .p {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="back" href="index.html"><i class="fa-solid fa-circle-arrow-left backbtn"></i>
+        Back to Homepage</a>
+    <h1 class="title">Quality Education 📚</h1>
+    <h3 class="sub">Comprehensive curriculum from Nursery to 10th grade with
+        focus on holistic development <br>
+        and academic excellence.</h3>
+    <p class="msg">Our experienced faculty plays a key role in maintaining high academic standards. Teachers use
+        concept-based and student-centric teaching methods to ensure clarity and understanding. Regular assessments,
+        doubt-clearing sessions, and exam-oriented preparation support consistent student progress. Faculty members
+        continuously upgrade their teaching skills through training and workshops. Their experience and dedication
+        create a disciplined and effective learning environment.</p>
+    <div class="boxes">
+        <div class="box">
+            <h1 class="icon"><i class="fa-solid fa-user-check"></i>
+            </h1>
+            <h1 class="card">Student-Centric Teaching</h1>
+            <h3 class="p">Focus on individual learning needs and concept clarity.</h3>
+        </div>
+        <div class="box">
+            <h1 class="icon"><i class="fa-solid fa-clipboard-check"></i>
+            </h1>
+            <h1 class="card">Regular Assessment</h1>
+            <h3 class="p">Continuous evaluation and constructive feedback.</h3>
+        </div>
+        <div class="box">
+            <h1 class="icon"><i class="fa-solid fa-book-open-reader"></i>
+            </h1>
+            <h1 class="card">Exam-Oriented Learning</h1>
+            <h3 class="p">Structured preparation for school and board exams.</h3>
+        </div>
+        <div class="box">
+            <h1 class="icon"><i class="fa-solid fa-chalkboard-user"></i>
+            </h1>
+            <h1 class="card">Faculty Development</h1>
+            <h3 class="p">Ongoing training and professional upgradation.</h3>
+        </div>
+    </div>
+    <footer>
+        <p>© 2026 St. John's School Chakia. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
