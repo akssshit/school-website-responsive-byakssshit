@@ -16,14 +16,21 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
         }
 
         .head {
             display: flex;
-            height: 15vh;
+            min-height: 10vh;
             width: 100%;
             justify-content: space-between;
             background-color: #043c88;
+            align-items: center;
+            padding: 10px 20px;
         }
 
         ul {
@@ -63,80 +70,26 @@
         }
 
         #hero1 {
-            height: 85vh;
+            min-height: 70vh;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .abth1 {
-            width: 100%;
             color: #004aad;
             font-family: 'cinzel', sans-serif;
             text-align: center;
             margin-top: 30px;
             font-size: 60px;
-            transition: color, 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
         }
-        .abth1:hover{
-            color:  #015ed8;
+
+        .abth1:hover {
+            color: #015ed8;
             font-size: 65px;
         }
 
-        .msgbox {
-            height: 400px;
-            width: 60vw;
-            background-color: #e7f0f7;
-            border-radius: 15px;
-            transition: all .5s ease-in-out;
-        }
-        .msgbox:hover{
-            background-color:  #cae7fd;
-            transform: scale(1.06);
-               box-shadow: 20px 20px 40px #b1bfca,
-            -20px -20px 40px gray;
-        }
-
-        .msgname {
-            padding-top: 20px;
-            margin-left: 200px;
-            color: #004aad;
-            font-family: "DM Serif Display", serif;
-        }
-
-        .msgsub {
-            color: #5170ff;
-            font-family: "Josefin Sans", sans-serif;
-            margin-left: 200px;
-            padding-top: 4px;
-        }
-
-        .msgimg {
-            background-color: #043c88;
-            font-size: 130px;
-            height: 200px;
-            width: 200px;
-            border-radius: 50%;
-            text-align: center;
-            margin-left: 45px;
-            margin-top: 20px;
-            float: left;
-        }
-
-        .msg {
-            font-size: 18px;
-            margin-top: 40px;
-            margin-left: 20px;
-            text-align: center;
-        }
-
-        .msgregard {
-            margin-left: 220px;
-        }
-
         #hero2 {
-            height: 90vh;
+            min-height: auto;
             width: 100%;
         }
 
@@ -144,20 +97,25 @@
             width: 100%;
             display: flex;
             justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .box {
-            height: 280px;
+            min-height: 280px;
             width: 400px;
-            background-color: #e7f0f7;
+            background-color: #fff;
             border-radius: 15px;
             transition: all .5s ease-in-out;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08),
+                -10px -10px 20px rgba(0, 0, 0, 0.08);
         }
-        .box:hover{
-              background-color:  #cae7fd;
+
+        .box:hover {
+            background-color: #fff;
             transform: scale(1.05);
-            box-shadow: 20px 20px 40px #b1bfca,
-            -20px -20px 40px gray;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.11),
+                -10px -10px 20px rgba(0, 0, 0, 0.11);
         }
 
         .vimi {
@@ -176,46 +134,229 @@
             font-size: large;
             font-weight: 2000;
         }
-        .whybox{
+
+        .whybox {
             width: 100%;
             display: flex;
             justify-content: center;
         }
+
         .whyabt {
             margin-top: 40px;
-            height: 300px;
+            min-height: auto;
             width: 1040px;
-            background-color: #e7f0f7;
+            max-width: 95%;
+            background-color: white;
             border-radius: 15px;
-                     transition: all .5s ease-in-out;
+            transition: all .3s ease-in-out;
+                   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.08),
+                -5px -5px 10px rgba(0, 0, 0, 0.08);
+                margin-bottom: 40px;
         }
-        .whyabt:hover{
-              background-color:  #cae7fd;
-            transform: scale(1.05);
-            box-shadow: 20px 20px 40px gray,
-            -20px -20px 40px #cae7fd ;
+
+        .whyabt:hover {
+            background-color: white;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08),
+                -10px -10px 20px rgba(0, 0, 0, 0.08);
         }
 
         .whytitle {
             font-family: "Josefin Sans", sans-serif;
-            font-weight: 8000;
+            font-weight: 700;
             padding-top: 20px;
+            font-size: 30px;
             margin-left: 60px;
+            margin-bottom: 5px;
         }
-        .why{
+
+        .why {
             font-family: 'playfair display', sans-serif;
             font-size: 20px;
             line-height: 2.4;
-            font-family: 2200;margin-left: 60px;
+            font-weight: 2200;
+            margin-left: 60px;
         }
-        footer{
-            height: 10vh;
+
+        footer {
+            min-height: 10vh;
             background-color: #043c88;
             font-size: 30px;
             width: 100%;
             text-align: center;
             color: white;
+            padding: 20px;
         }
+
+        .abtp {
+            margin: 40px 40px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .abtmsg {
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: #434343;
+            padding-right: 60px;
+            text-align: left;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .schoolabt {
+            min-height: 300px;
+            width: 400px;
+            max-width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        #msgs {
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            margin: 40px 0px;
+        }
+
+        .chairmsgbox {
+            width: 70vw;
+            height: auto;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.08),
+                -3px -3px 13px rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+        }
+
+        .chairtit {
+            margin: 0px 140px;
+            color: #043c88;
+            font-family: 'playfair display', sans-serif;
+            width: 100%;
+        }
+        .chairman{
+            height: 220px;
+            width: 180px;
+            border-radius: 6px;
+            border: 2px solid black;
+            margin: 10px 20px;
+            flex-shrink: 0;
+        }
+        .chairmsg{
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            line-height: 1.4;
+        }
+        .chairwrap{
+            margin-top: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .chairsub{
+            margin: 0px 140px;
+            color: #043c88;
+            font-family: 'Josefin sans', sans-serif;
+            width: 100%;
+        }
+        .direcmsgbox{
+            width: 70vw;
+            height: auto;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.08),
+                -3px -3px 13px rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+        }
+        .directit{
+              margin-left: 140px;
+            color: #043c88;
+            font-family: 'playfair display', sans-serif;
+            width: 100%;
+        }
+        .direcsub{
+              margin-left:140px;
+            color: #043c88;
+            font-family: 'Josefin sans', sans-serif;
+            width: 100%;
+        }
+        .direcwrap{
+             margin-top: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+        }
+        .direcmsg{
+     font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            line-height: 1.4;
+            text-align: left;
+        }
+        .director{
+              height: 220px;
+            width: 180px;
+            border-radius: 6px;
+            border: 2px solid black;
+            margin: 10px 20px;
+            flex-shrink: 0;
+                }
+                .prinmsgbox{
+                         width: 70vw;
+            height: auto;
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.08),
+                -3px -3px 13px rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+                }
+                .printit{
+                    margin: 0px 140px;
+            color: #043c88;
+            font-family: 'playfair display', sans-serif;
+            width: 100%;
+                }
+                .prinsub{
+                     margin: 0px 140px;
+            color: #043c88;
+            font-family: 'Josefin sans', sans-serif;
+            width: 100%;
+                }
+                .prinwrap{
+                          margin-top: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+                }
+                  .prinmsg{
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            line-height: 1.4;
+        }
+        .principal{
+            height: 220px;
+            width: 180px;
+            border-radius: 6px;
+            border: 2px solid black;
+            margin: 10px 20px;
+            flex-shrink: 0;
+        }
+        .msg{
+            transition: all .4s ease-in-out;
+        }
+        .msg:hover{
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.11),
+            -6px -6px 12px rgba(0, 0, 0, 0.11);
+            transform: translateY(-5px);
+        }
+                
 
         /* RESPONSIVE MEDIA QUERIES */
 
@@ -231,11 +372,13 @@
             .name {
                 font-size: 35px;
                 margin: 10px 0;
+                text-align: center;
             }
 
             .tagline {
                 font-size: 16px;
                 margin: 5px 0;
+                text-align: center;
             }
 
             ul {
@@ -264,39 +407,21 @@
                 font-size: 48px;
             }
 
-            .msgbox {
-                width: 85vw;
-                height: auto;
-                padding: 20px;
+            .abtp {
+                margin: 30px 20px;
+                flex-direction: column;
+                align-items: center;
             }
 
-            .msgimg {
-                width: 150px;
-                height: 150px;
-                font-size: 100px;
-                margin-left: 30px;
-            }
-
-            .msgname {
-                margin-left: 170px;
-                font-size: 24px;
-            }
-
-            .msgsub {
-                margin-left: 170px;
+            .abtmsg {
+                padding-right: 0;
+                text-align: center;
                 font-size: 18px;
             }
 
-            .msg {
-                font-size: 16px;
-                margin-top: 30px;
-                padding: 0 10px;
-            }
-
-            .msgregard {
-                margin-left: 180px;
-                margin-top: 20px;
-                font-size: 20px;
+            .schoolabt {
+                width: 100%;
+                max-width: 500px;
             }
 
             #hero2 {
@@ -336,6 +461,36 @@
                 font-size: 20px;
                 height: auto;
                 padding: 20px 10px;
+            }
+
+            /* Messages Section - Tablet */
+            #msgs {
+                margin: 30px 0;
+                gap: 40px;
+            }
+
+            .chairmsgbox, .direcmsgbox, .prinmsgbox {
+                width: 85vw;
+                padding: 15px;
+            }
+
+            .chairtit, .directit, .printit {
+                margin-left: 80px;
+                font-size: 28px;
+            }
+
+            .chairsub, .direcsub, .prinsub {
+                margin-left: 80px;
+                font-size: 18px;
+            }
+
+            .chairman, .director, .principal {
+                height: 180px;
+                width: 150px;
+            }
+
+            .chairmsg, .direcmsg, .prinmsg {
+                font-size: 18px;
             }
         }
 
@@ -385,46 +540,19 @@
                 font-size: 34px;
             }
 
-            .msgbox {
-                width: 95%;
-                height: auto;
-                padding: 15px;
+            .abtp {
+                margin: 20px 10px;
             }
 
-            .msgimg {
-                width: 100px;
-                height: 100px;
-                font-size: 70px;
-                margin-left: 15px;
-                float: none;
-                margin: 10px auto;
-            }
-
-            .msgname {
-                margin-left: 0;
-                text-align: center;
-                font-size: 22px;
-                padding-top: 15px;
-            }
-
-            .msgsub {
-                margin-left: 0;
-                text-align: center;
+            .abtmsg {
+                padding-right: 0;
                 font-size: 16px;
+                text-align: center;
             }
 
-            .msg {
-                font-size: 14px;
-                margin-top: 20px;
-                text-align: center;
-                line-height: 1.6;
-            }
-
-            .msgregard {
-                margin-left: 0;
-                text-align: center;
-                margin-top: 15px;
-                font-size: 18px;
+            .schoolabt {
+                width: 100%;
+                min-height: 250px;
             }
 
             #hero2 {
@@ -466,6 +594,44 @@
                 font-size: 16px;
                 padding: 15px 10px;
             }
+
+            /* Messages Section - Mobile */
+            #msgs {
+                margin: 20px 0;
+                gap: 30px;
+            }
+
+            .chairmsgbox, .direcmsgbox, .prinmsgbox {
+                width: 90vw;
+                padding: 10px 15px;
+            }
+
+            .chairtit, .directit, .printit {
+                margin-left: 20px;
+                font-size: 24px;
+            }
+
+            .chairsub, .direcsub, .prinsub {
+                margin-left: 20px;
+                font-size: 16px;
+            }
+
+            .chairwrap, .direcwrap, .prinwrap {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .chairman, .director, .principal {
+                height: 200px;
+                width: 160px;
+                margin: 15px auto;
+            }
+
+            .chairmsg, .direcmsg, .prinmsg {
+                font-size: 16px;
+                text-align: center;
+                line-height: 1.6;
+            }
         }
 
         /* Small Mobile - Below 480px */
@@ -490,20 +656,12 @@
                 font-size: 28px;
             }
 
-            .msgname {
-                font-size: 20px;
+            .abtmsg {
+                font-size: 10px;
             }
 
-            .msgsub {
-                font-size: 14px;
-            }
-
-            .msg {
-                font-size: 13px;
-            }
-
-            .msgregard {
-                font-size: 16px;
+            .schoolabt {
+                min-height: 200px;
             }
 
             .vimi {
@@ -525,20 +683,98 @@
             footer {
                 font-size: 14px;
             }
+
+            /* Messages Section - Small Mobile */
+            #msgs {
+                gap: 25px;
+            }
+
+            .chairmsgbox, .direcmsgbox, .prinmsgbox {
+                width: 95vw;
+                padding: 10px;
+            }
+
+            .chairtit, .directit, .printit {
+                margin-left: 10px;
+                font-size: 20px;
+            }
+
+            .chairsub, .direcsub, .prinsub {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .chairman, .director, .principal {
+                height: 160px;
+                width: 130px;
+                margin: 10px auto;
+            }
+
+            .chairmsg, .direcmsg, .prinmsg {
+                font-size: 14px;
+                line-height: 1.5;
+            }
         }
+        /* Remove default arrow */
+summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Chrome / Edge */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom icon */
+summary::before {
+  content: "▶";
+  margin-right: 10px;
+  font-size: 30px;
+  color: #043c88;
+  transition: transform 0.3s ease;
+}
+
+/* When opened */
+details[open] summary::before {
+  content: "▶";
+  transform: rotate(90deg);
+}
+details[open] summary{
+    font-size: 34px;
+}
+details p {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
     </style>
 </head>
 
 <body>
     <header class="head">
         <div class="wraphead">
-            <img src="" alt="Logo not found" class="logo">
+
             <h1 class="name">ST. John's School</h1>
             <h3 class="tagline">Walk to the Light</h3>
         </div>
         <nav>
             <ul>
-                <li><a class="nav" href="homeres.html">Home</a></li>
+                <li><a class="nav" href="index.html">Home</a></li>
                 <li><a class="nav" href="aboutres.html">About</a></li>
                 <li><a class="nav" href="admissionres.html">Admission</a></li>
                 <li><a class="nav" href="galleryres.html">Gallery</a></li>
@@ -546,55 +782,108 @@
             </ul>
         </nav>
     </header>
-    <section id="hero1">
-        <main class="msgmain">
-            <h1 class="abth1">About St. John's School</h1>
-            <div class="msgbox">
-                <h1 class="msgname">Mr. Rajesh Sahani</h1>
-                <h3 class="msgsub">Principal's Message</h3>
-                <div class="msgimg">👤</div>
-                <p class="msg">Dear Parents and Students,<br>
-                    Welcome to St. John's School, where we believe in nurturing not just academic excellence,<br> but
-                    also character, values, and life skills. <br>Our mission is to provide an environment where every
-                    child feels valued, <br>challenged, and inspired to reach their full potential.
-                    With a dedicated team of educators and a supportive community, we strive to prepare our students for
-                    the challenges of tomorrow while instilling in them the timeless values of integrity, compassion,
-                    and service.</p>
-                <h2 class="msgregard">Warm regards,<br>Mr. Rajesh Sahani</h2>
+    <main>
+        <section id="hero1">
+            <h1 class="abth1">About Us</h1>
+            <div class="abtp">
+                <p class="abtmsg">St. John's School Chakia is a co-educational English-medium school located in
+                    Professor
+                    Colony Lane, Ward 9, Bara Chakia, East Champaran, Bihar. The school provides quality education from
+                    the
+                    foundational years through higher classes, with a focus on academic excellence, holistic
+                    development,
+                    and character building. Managed by the Sumitra Devi Nagina Prasad Educational Trust, the institution
+                    strives to create a nurturing learning environment supported by experienced teachers and a
+                    student-centric approach. Emphasis is placed on strong communication skills, disciplined study
+                    habits,
+                    and extracurricular engagement to prepare students for future challenges. The school's curriculum
+                    and
+                    teaching methods are designed to help all students achieve their full potential while fostering
+                    confidence and leadership qualities. Parents and the local community recognize the school for its
+                    dedicated faculty, supportive environment, and commitment to overall growth of students.</p>
+                <img class="schoolabt" src="school.jpeg" alt="School Picture">
             </div>
-        </main>
-    </section>
-    <section id="hero2">
-        <main class="abtdown">
-            <div class="abtbox">
-                <div class="box">
-                    <h1 class="vimi">🎯 Our Vision</h1>
-                    <p class="vimip">To be a center of excellence in education, fostering intellectual growth, moral
-                        values, and social responsibility in our students. We envision creating leaders who will
-                        contribute positively to society and make a difference in the world.</p>
-                </div>
-                <div class="box">
-                    <h1 class="vimi">💡 Our Mission</h1>
-                    <p class="vimip">To provide quality education that develops the whole child - intellectually,
-                        physically, emotionally, and spiritually. We are committed to creating a safe, supportive, and
-                        stimulating environment where students can discover their potential and develop a lifelong love
-                        for learning.</p>
-                </div>
-            </div>
-            <div class="whybox">
-                <div class="whyabt">
-                    <h1 class="whytitle">Why Choose St. John's?</h1>
-                    <p class="why">
-                        ✓ Classes from Nursery to 10th Grade with experienced faculty <br>
-                        ✓ Modern infrastructure with smart classrooms and laboratories <br>
-                        ✓ Focus on character building and moral values <br>
-                        ✓ Strong emphasis on sports and extracurricular activities <br>
-                        ✓ Safe and nurturing learning environment <br>
-                    </p>
+        </section>
+        <section id="msgs">
+            <div class="chairmsgbox msg">
+                <h1 class="chairtit">Nagina Prasad</h1>
+                <h3 class="chairsub">Chairman's Message</h3>
+                <div class="chairwrap">
+                    <img class="chairman" src="" alt="Chairman's Photo">
+                    <p class="chairmsg">Education is the foundation of a strong and progressive society. At our institution, <br>
+                        we are committed to providing quality education that nurtures knowledge, discipline, and moral
+                        values among students. We believe that every child has unique potential, and our aim is to 
+                        create an environment where students can grow academically, socially, and ethically. <br>
+
+                        With the support of dedicated teachers, supportive parents, and a positive learning atmosphere,
+                        we strive to prepare our students to face future challenges with confidence and responsibility.
+                        I extend my best wishes to all students for their bright and successful future.
+                        <br><br>
+
+                        — <strong>Nagina Prasad</strong></p>
                 </div>
             </div>
-        </main>
-    </section>
+            <div class="direcmsgbox msg">
+                <h1 class="directit">Rahul Kumar</h1>
+                <h3 class="direcsub">Director's Message</h3>
+                <div class="direcwrap">
+                                        <img src="" alt="Director" class="director">
+                    <p class="direcmsg">At our institution, we focus on creating a balanced learning environment that encourages academic excellence, creativity, and character development. Our goal is to provide students with the right guidance, modern teaching methods, and opportunities that help them discover their strengths and talents. <br>
+
+We are proud of our dedicated faculty and supportive school community, who work together to shape responsible, confident, and capable individuals. I encourage our students to remain curious, disciplined, and committed to continuous learning as they move forward in life.
+<br><br>
+— <strong>Rahul Kumar</strong></p>
+
+                </div>
+            </div>
+            <div class="prinmsgbox msg">
+                <h1 class="printit">Rajesh Sahani</h1>
+                <h3 class="prinsub">Principal's Message</h3>
+                <div class="prinwrap">
+                    <img src="" alt="Principal" class="principal">
+                    <p class="prinmsg">It gives me immense pleasure to welcome you to our school website. Our institution is committed to providing quality education that focuses not only on academic excellence but also on the overall development of every student. We strive to create a positive learning environment where discipline, values, creativity, and confidence are nurtured. <br>
+
+With the support of dedicated teachers and the cooperation of parents, we aim to prepare our students to face future challenges with knowledge, skills, and strong moral values. I invite you to explore our school and be a part of this journey of learning and growth. <br> <br>
+
+—<strong>Rajesh Sahani</strong></p>
+                </div>
+            </div>
+        </section>
+        <section id="hero2">
+            <main class="abtdown">
+                <div class="abtbox">
+                    <div class="box">
+                        <h1 class="vimi">🎯 Our Vision</h1>
+                        <p class="vimip">To be a center of excellence in education, fostering intellectual growth, moral
+                            values, and social responsibility in our students. We envision creating leaders who will
+                            contribute positively to society and make a difference in the world.</p>
+                    </div>
+                    <div class="box">
+                        <h1 class="vimi">💡 Our Mission</h1>
+                        <p class="vimip">To provide quality education that develops the whole child - intellectually,
+                            physically, emotionally, and spiritually. We are committed to creating a safe, supportive,
+                            and
+                            stimulating environment where students can discover their potential and develop a lifelong
+                            love
+                            for learning.</p>
+                    </div>
+                </div>
+                <div class="whybox">
+                    <div class="whyabt">
+                     <details>  <summary class="whytitle">Why Choose St. John's?</summary>
+                        <p class="why">
+                            ✓ Classes from Nursery to 10th Grade with experienced faculty <br>
+                            ✓ Modern infrastructure with smart classrooms and laboratories <br>
+                            ✓ Focus on character building and moral values <br>
+                            ✓ Strong emphasis on sports and extracurricular activities <br>
+                            ✓ Safe and nurturing learning environment <br>
+                        </p>
+                        </details> 
+                    </div>
+                </div>
+            </main>
+        </section>
+    </main>
     <footer>© 2026 St. John's School. All Rights Reserved. <br>Nurturing Young Minds | Building Future Leaders</footer>
 </body>
 
