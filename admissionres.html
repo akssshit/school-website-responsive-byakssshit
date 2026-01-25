@@ -64,7 +64,7 @@
 
         #hero1 {
             width: 100%;
-            height: 100vh;
+            height: auto;
         }
 
         .title1 {
@@ -77,9 +77,10 @@
             margin-top: 30px;
             transition: all .5s ease;
         }
-        .title1:hover{
+
+        .title1:hover {
             font-size: 65px;
-            color:#015ed8 ;
+            color: #015ed8;
         }
 
         .banner {
@@ -95,10 +96,10 @@
             flex-direction: column;
             transition: all .5s ease;
         }
-        .banner:hover{
-              background-color: #3d89ec;
-            box-shadow: 20px 20px 40px gray ,
-            -20px -20px 40px #bfe3ff;
+
+        .banner:hover {
+            background-color: #3d89ec;
+            box-shadow: 0px 10px 10px rgba(128, 128, 128, 0.512);
             transform: scale(1.05);
         }
 
@@ -114,75 +115,166 @@
         }
 
         #hero2 {
+            height: auto;
             width: 100%;
-            height: 100vh;
+            margin: 30px 0px;
+        }
+
+        .adminfo {
+            color: #043c88;
+            font-size: 40px;
+            font-family: 'playfair display', sans-serif;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+
+        .boxwrap {
             display: flex;
             justify-content: center;
+            gap: 100px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .box {
+            height: 250px;
+            width: 300px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            border-radius: 15px;
+            transition: all .4s ease-in-out;
         }
 
-        .reqbox {
-            width: 1200px;
-            height: 80vh;
-            background-color: #e7f0f7;
-            border-radius: 20px;
-            transition: all .5s ease;
-        }
-        .reqbox:hover{
-             background-color: #bfe3ff;
-            box-shadow: 20px 20px 40px gray ,
-            -20px -20px 40px #bfe3ff;
-            transform: scale(1.05);
+        .box:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.69);
+            transform: translateY(-5px);
         }
 
-        .reqtitle {
+        .box h2 {
+            font-family: 'ubuntu', sans-serif;
             font-weight: bold;
-            font-family: 'Playfair Display', sans-serif;
-            padding-left: 50px;
-            padding-top: 20px;
-            font-size: 50px;
+            font-size: 25px;
+            padding: 5px;
+            text-overflow: wrap;
+            text-align: center;
         }
 
-        .reqcon {
-            padding-left: 50px;
-            line-height: 2.5;
-            font-size: 30px;
+        .box p {
+            padding: 15px;
+            font-family: 'source sans 3', sans-serif;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .box a {
+            text-decoration: none;
+            font-family: 'source sans 3', sans-serif;
+            font-size: 20px;
+            transition: all .4s ease-in-out;
         }
 
         #hero3 {
-            height: 90vh;
             width: 100%;
+            height: auto;
+            margin: 30px 0px;
+        }
+
+        #hero3 h2 {
+            color: #043c88;
+            font-family: 'playfair display', sans-serif;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #hero3 details {
+            background: #ffffff;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.286);
+            max-width: 1000px;
+            margin-top: 30px;
+            transition: all .4s ease-in-out;
+            margin-left: 100px;
+        }
+
+        details summary {
+            font-size: 25px;
+            font-family: 'source sans 3', sans-serif;
+        }
+
+        details p {
+            font-size: 20px;
+            font-family: 'source sans 3', sans-serif;
+            line-height: 1.5;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .cencta {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .feebox {
-            height: 70vh;
-            width: 1200px;
-            background-color: #e7f0f7;
+        .ctabox {
+            width: 800px;
+            height: auto;
+            background: white;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.286);
             border-radius: 15px;
-            transition: all .5s ease-in-out;
-        }
-        .feebox:hover{
-            background-color: #bfe3ff;
-            box-shadow: 20px 20px 40px gray ,
-            -20px -20px 40px #bfe3ff;
-            transform: scale(1.05);
+            margin: 40px;
+            padding-bottom: 40px;
         }
 
-        .feetitle {
-            font-size: 40px;
-            font-family: 'Playfair Display', sans-serif;
-            padding: 20px 40px;
+        .ctatit {
+            font-family: 'playfair display', sans-serif;
+            text-align: center;
+            color: #043c88;
+            font-size: 36px;
+            margin: 20px;
         }
-        .fees{
-               padding-left: 50px;
-            line-height: 2.5;
-            font-size: 34px;
+
+        .ctap {
+            font-size: 26px;
+            font-family: 'source sans 3', sans-serif;
+            text-align: center;
         }
-        footer{
-         height: 10vh;
+
+        .cta-btn {
+            text-align: center;
+            text-decoration: none;
+            color: #043c88;
+            font-family: 'source sans 3', sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .cena{
+            text-align: center;
+margin: 20px;
+        }
+        .email{
+            margin-left: 40px;
+            color: #043c88;
+               font-family: 'source sans 3', sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline;
+        }
+        .emailtxt{
+            font-size: 25px;
+                           font-family: 'source sans 3', sans-serif;
+
+        }
+
+        footer {
+            height: 10vh;
             background-color: #043c88;
             font-size: 30px;
             width: 100%;
@@ -192,7 +284,6 @@
 
         /* RESPONSIVE MEDIA QUERIES */
 
-        /* Tablet - 768px to 1024px */
         @media (max-width: 1024px) {
             .head {
                 height: auto;
@@ -254,47 +345,51 @@
                 margin-top: 15px;
             }
 
-            #hero2 {
-                height: auto;
-                padding: 40px 20px;
+            .adminfo {
+                font-size: 35px;
+                margin-left: 30px;
             }
 
-            .reqbox {
-                width: 85%;
-                height: auto;
-                padding: 20px;
+            .boxwrap {
+                gap: 50px;
             }
 
-            .reqtitle {
-                font-size: 38px;
-                padding-left: 30px;
-            }
-
-            .reqcon {
-                font-size: 24px;
-                padding-left: 30px;
-                line-height: 2.2;
-            }
-
-            #hero3 {
-                height: auto;
-                padding: 40px 20px;
-            }
-
-            .feebox {
-                width: 85%;
-                height: auto;
-                padding: 20px;
-            }
-
-            .feetitle {
+            #hero3 h2 {
                 font-size: 32px;
-                padding: 20px 30px;
+                margin-left: 30px;
             }
 
-            .fees {
-                font-size: 26px;
-                padding-left: 30px;
+            #hero3 details {
+                margin-left: 30px;
+                margin-right: 30px;
+                max-width: calc(100% - 60px);
+            }
+
+            .ctabox {
+                width: 90%;
+                margin: 40px 20px;
+            }
+
+            .ctatit {
+                font-size: 32px;
+            }
+
+            .ctap {
+                font-size: 22px;
+                padding: 0 20px;
+            }
+
+            .cta-btn {
+                font-size: 22px;
+            }
+
+            .email {
+                font-size: 22px;
+                margin-left: 20px;
+            }
+
+            .emailtxt {
+                font-size: 22px;
             }
 
             footer {
@@ -304,7 +399,6 @@
             }
         }
 
-        /* Mobile - Below 768px */
         @media (max-width: 768px) {
             .head {
                 height: auto;
@@ -365,46 +459,70 @@
                 margin-top: 10px;
             }
 
-            #hero2 {
-                padding: 30px 15px;
+            .adminfo {
+                font-size: 30px;
+                margin-left: 20px;
             }
 
-            .reqbox {
-                width: 95%;
-                padding: 15px;
+            .boxwrap {
+                gap: 30px;
             }
 
-            .reqtitle {
+            .box {
+                width: 90%;
+                max-width: 350px;
+            }
+
+            #hero3 h2 {
                 font-size: 28px;
-                padding-left: 20px;
+                margin-left: 20px;
             }
 
-            .reqcon {
-                font-size: 18px;
-                padding-left: 20px;
-                padding-right: 15px;
-                line-height: 2;
+            #hero3 details {
+                margin-left: 20px;
+                margin-right: 20px;
+                max-width: calc(100% - 40px);
+                padding: 12px 15px;
             }
 
-            #hero3 {
-                padding: 30px 15px;
-            }
-
-            .feebox {
-                width: 95%;
-                padding: 15px;
-            }
-
-            .feetitle {
-                font-size: 26px;
-                padding: 15px 20px;
-            }
-
-            .fees {
+            details summary {
                 font-size: 20px;
-                padding-left: 20px;
-                padding-right: 15px;
-                line-height: 2.2;
+            }
+
+            details p {
+                font-size: 18px;
+            }
+
+            .ctabox {
+                width: 95%;
+                margin: 30px 10px;
+                padding-bottom: 30px;
+            }
+
+            .ctatit {
+                font-size: 28px;
+            }
+
+            .ctap {
+                font-size: 20px;
+                padding: 0 15px;
+            }
+
+            .cta-btn {
+                font-size: 20px;
+            }
+
+            .email {
+                font-size: 20px;
+                margin-left: 15px;
+                display: block;
+                margin-top: 10px;
+            }
+
+            .emailtxt {
+                font-size: 18px;
+                display: block;
+                margin-top: 5px;
             }
 
             footer {
@@ -413,7 +531,6 @@
             }
         }
 
-        /* Small Mobile - Below 480px */
         @media (max-width: 480px) {
             .name {
                 font-size: 24px;
@@ -443,20 +560,74 @@
                 font-size: 16px;
             }
 
-            .reqtitle {
+            .adminfo {
                 font-size: 24px;
+                margin-left: 15px;
             }
 
-            .reqcon {
-                font-size: 16px;
+            .box {
+                width: 95%;
             }
 
-            .feetitle {
+            .box h2 {
                 font-size: 22px;
             }
 
-            .fees {
+            .box p {
+                font-size: 16px;
+            }
+
+            .box a {
                 font-size: 18px;
+            }
+
+            #hero3 h2 {
+                font-size: 24px;
+                margin-left: 15px;
+            }
+
+            #hero3 details {
+                margin-left: 15px;
+                margin-right: 15px;
+                max-width: calc(100% - 30px);
+                padding: 10px 12px;
+            }
+
+            details summary {
+                font-size: 18px;
+            }
+
+            details p {
+                font-size: 16px;
+            }
+
+            .ctabox {
+                width: 95%;
+                margin: 20px 10px;
+                padding-bottom: 25px;
+            }
+
+            .ctatit {
+                font-size: 24px;
+                margin: 15px;
+            }
+
+            .ctap {
+                font-size: 18px;
+                padding: 0 10px;
+            }
+
+            .cta-btn {
+                font-size: 18px;
+            }
+
+            .email {
+                font-size: 18px;
+                margin-left: 10px;
+            }
+
+            .emailtxt {
+                font-size: 16px;
             }
 
             footer {
@@ -469,13 +640,12 @@
 <body>
     <header class="head">
         <div class="wraphead">
-            <img src="" alt="Logo not found" class="logo">
             <h1 class="name">ST. John's School</h1>
             <h3 class="tagline">Walk to the Light</h3>
         </div>
         <nav>
             <ul>
-                <li><a class="nav" href="homeres.html">Home</a></li>
+                <li><a class="nav" href="index.html">Home</a></li>
                 <li><a class="nav" href="aboutres.html">About</a></li>
                 <li><a class="nav" href="admissionres.html">Admission</a></li>
                 <li><a class="nav" href="galleryres.html">Gallery</a></li>
@@ -483,9 +653,10 @@
             </ul>
         </nav>
     </header>
+
     <section id="hero1">
         <main class="bannner1">
-            <div class="title1">Admission Information</div>
+            <div class="title1">Admission</div>
             <div class="banner">
                 <h1 class="bannertitle">Admissions Open for 2026-27</h1>
                 <h2 class="bannersub">Apply now for classes Nursery to 10th Grade</h2>
@@ -493,33 +664,78 @@
         </main>
     </section>
     <section id="hero2">
-        <main class="req">
-            <div class="reqbox">
-                <h1 class="reqtitle">📋Admission Requirements</h1>
-                <p class="reqcon">Birth certificate copy <br>
-                    Previous school transfer certificate (for classes 1-10) <br>
-                    Address proof <br>
-                    Parent ID proof <br>
-                    Recent passport size photographs (4 copies) <br>
-                    Medical fitness certificate</p>
+        <h1 class="adminfo">Admission Information</h1>
+        <div class="boxwrap">
+            <div class="box">
+                <h2>Admission Requirements</h2>
+                <p>Documents and eligibility criteria for admission.</p>
+                <a href="requirements.html">View Details →</a>
             </div>
-        </main>
+            <div class="box">
+                <h2>Fee Structure</h2>
+                <p>Fee details as per school guidelines.</p>
+                <a href="fees.html">View Details →</a>
+            </div>
+        </div>
     </section>
     <section id="hero3">
-        <main class="feesstructure">
-            <div class="feebox">
-                <h1 class="feetitle">Fee Structure for 2026 - 2027</h1>
-                <p class="fees">
-                    Nursery to UKG: ₹10xx per month <br>
-                    Class 1 to 5: ₹13xx per month <br>
-                    Class 6 to 8: ₹15xx per month <br>
-                    Class 9 to 10: ₹18xx per month 
-                </p>
-                <a href="" download="" class="btn" ></a>
-            </div>
-        </main>
+        <h2>Frequently Asked Questions</h2>
+        <div class="wrapfaq">
+            <details>
+                <summary>What classes are admissions open for?</summary>
+                <p>Admissions are open for Nursery to Class 10.</p>
+            </details>
+
+            <details>
+                <summary>How can parents apply for admission?</summary>
+                <p>Parents are requested to visit the school office during working hours.</p>
+            </details>
+
+            <details>
+                <summary>Is online admission available?</summary>
+                <p>Currently, admissions are processed offline at the school campus.</p>
+            </details>
+            <details>
+                <summary>What is the admission process?</summary>
+                <p>The process includes enquiry & registration, interaction/assessment, document verification, and
+                    confirmation of admission.</p>
+            </details>
+
+            <details>
+                <summary>Are there any age criteria for different classes?</summary>
+                <p>Yes, the age criteria vary for each class. Parents are requested to contact the school office for
+                    exact details.</p>
+            </details>
+
+            <details>
+                <summary>How can I know about the fee structure?</summary>
+                <p>The detailed fee structure is available at the school office. Parents are advised to visit for
+                    complete information.</p>
+            </details>
+
+            <details>
+                <summary>Is transport facility available?</summary>
+                <p>The school provides bus facility for certain routes. Parents can inquire at the office.</p>
+            </details>
+        </div>
     </section>
-    <footer>© 2025 St. John's School. All Rights Reserved. <br>Nurturing Young Minds | Building Future Leaders</footer>
+    <section id="hero4">
+        <div class="cencta">
+            <div class="ctabox">
+                <h1 class="ctatit">Ready to Apply!</h1>
+                <p class="ctap">Visit the school office or contact us for more information about admissions.</p>
+                <div class="cena">
+                <a href="contactres.html" class="cta-btn">Enquire Now</a>
+                </div>
+                <a href="mailto:sjschoolbarachakia2007@gmail.com" class="email">Enquire via Email </a><span class="emailtxt">on sjschoolbarachakia2007@gmail.com</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 St. John's School. All Rights Reserved. <br>
+        Nurturing Young Minds | Building Future Leaders
+    </footer>
 </body>
 
 </html>
